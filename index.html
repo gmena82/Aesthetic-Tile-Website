@@ -3,65 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic Tile Website</title>
+    <title>Aesthetic Tile - Expert Tile Installation | Groveland, FL</title>
+    <meta name="description" content="Professional tile installation for kitchens, bathrooms, and flooring in Groveland, FL. Expert craftsmanship for backsplashes, showers, and specialty projects.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Aesthetic Tiles</h1>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="location-info">
+                        <span class="location">Groveland, FL</span>
+                        <span class="separator">•</span>
+                        <span class="hours">Mon–Fri 9am–5pm</span>
+                    </div>
+                    <div class="contact-info">
+                        <a href="tel:+15026507014" class="contact-link">
+                            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.07 22 2 13.93 2 3a1 1 0 011-1h3.49a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+                            (502) 650-7014
+                        </a>
+                        <a href="mailto:office@aesthetictile.com" class="contact-link">
+                            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l7.4 5.55a1 1 0 001.2 0L20 8.24V18H4z"/></svg>
+                            office@aesthetictile.com
+                        </a>
+                        <a href="https://www.instagram.com/aesthetictile/" target="_blank" class="contact-link">
+                            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm10.5 1.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10z"/></svg>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        </div>
+
+        <!-- Main navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/aesthetic-tile-logo.png" alt="Aesthetic Tile logo" class="logo-img">
+                        <span class="logo-text">Aesthetic Tile</span>
+                    </a>
+                    
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#services" class="dropdown-toggle">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#kitchen-backsplash">Kitchen Backsplash</a></li>
+                                <li><a href="#bathroom-shower">Bathroom & Shower</a></li>
+                                <li><a href="#floor-tile">Floor Tile Installation</a></li>
+                                <li><a href="#fireplaces">Fireplaces</a></li>
+                                <li><a href="#special-projects">Special Projects</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <a href="#contact" class="cta-button">Request a Quote</a>
+                    
+                    <button class="mobile-menu-btn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Beautiful Tile Designs</h2>
-                <p>Discover our stunning collection of aesthetic tiles for your perfect space</p>
-                <button class="cta-button">Explore Gallery</button>
+            <div class="hero-bg">
+                <img src="images/img/hero-backsplash.png" alt="Textured white tile backsplash with floating shelves" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>AestheticTile-Florida</span>
+                        <span>•</span>
+                        <span>Groveland & nearby</span>
+                    </div>
+                    <h1>Expert Tile Installation for Flooring, Backsplashes & Showers</h1>
+                    <p>Detail-driven craftsmanship for kitchens, bathrooms, and whole-home flooring. Local crew, clean job sites, and finishes that last.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">Request a Quote</a>
+                        <a href="#gallery" class="btn-secondary">View Gallery</a>
+                    </div>
+                    <div class="hero-features">
+                        <span>Five‑Star Service</span>
+                        <span>•</span>
+                        <span>Detailed prep & clean finishes</span>
+                        <span>•</span>
+                        <span>Clear communication</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bottom">
+                <div class="container">
+                    <div class="service-area-badge">
+                        Serving Groveland, Clermont, Minneola, Winter Garden & nearby communities
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="gallery" class="gallery">
-            <h2>Our Tile Collection</h2>
-            <div class="tile-grid">
-                <div class="tile-item">
-                    <div class="tile-placeholder">Marble Collection</div>
-                </div>
-                <div class="tile-item">
-                    <div class="tile-placeholder">Ceramic Designs</div>
-                </div>
-                <div class="tile-item">
-                    <div class="tile-placeholder">Modern Patterns</div>
-                </div>
-                <div class="tile-item">
-                    <div class="tile-placeholder">Natural Stone</div>
+        <!-- Expertise Section -->
+        <section id="about" class="expertise">
+            <div class="container">
+                <div class="expertise-content">
+                    <div class="expertise-badge">
+                        <div class="years">15+</div>
+                        <div class="years-text">Years of<br>Experience</div>
+                    </div>
+                    <div class="expertise-text">
+                        <div class="section-label">Award-Winning Master Craftsmen</div>
+                        <h2>We are the premier tile installation specialists in Central Florida.</h2>
+                        <p>Aesthetic Tile specializes in professional tile installation for residential and commercial projects. With over 15 years of experience in high-quality craftsmanship, we are one of the premier tile installation contractors in the Groveland area. From kitchen backsplashes to bathroom renovations, we set the standard in professional skill, experience, and efficiency. Our team specializes in detailed prep work, clean installations, and finishes that last. Reach out to us, and let's bring your vision to life.</p>
+                        <a href="#about" class="btn-outline">About Us</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>We specialize in creating beautiful, high-quality tiles that transform any space into a work of art.</p>
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Tile Services</h2>
+                    <p>Backsplashes, showers, flooring, fireplaces, and specialty installations.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/img/kitchen-backsplash.png" alt="Modern kitchen backsplash with geometric metallic tiles" loading="lazy">
+                            <div class="service-overlay"></div>
+                            <div class="service-title">Kitchen Backsplash</div>
+                        </div>
+                        <div class="service-footer">
+                            <span>Learn more</span>
+                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/img/bathroom-shower.png" alt="Freestanding tub with marble-look wall tile and wood shelves" loading="lazy">
+                            <div class="service-overlay"></div>
+                            <div class="service-title">Bathroom & Tile Shower Installation</div>
+                        </div>
+                        <div class="service-footer">
+                            <span>Learn more</span>
+                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/img/floor-tile.png" alt="Close-up of mosaic triangles used as an accent" loading="lazy">
+                            <div class="service-overlay"></div>
+                            <div class="service-title">Floor Tile Installation</div>
+                        </div>
+                        <div class="service-footer">
+                            <span>Learn more</span>
+                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/img/fireplace.png" alt="Tiled fireplace wall with TV mounted above" loading="lazy">
+                            <div class="service-overlay"></div>
+                            <div class="service-title">Fire Places</div>
+                        </div>
+                        <div class="service-footer">
+                            <span>Learn more</span>
+                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/img/special-projects.png" alt="Gradient vertical mosaic pattern" loading="lazy">
+                            <div class="service-overlay"></div>
+                            <div class="service-title">Special Projects</div>
+                        </div>
+                        <div class="service-footer">
+                            <span>Learn more</span>
+                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-cta">
+                    <a href="#contact" class="btn-primary">Request a Quote</a>
+                </div>
+            </div>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <p>Ready to start your tile project? Get in touch with our design experts.</p>
-            <button class="contact-button">Get Quote</button>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <p>Trusted by homeowners throughout Central Florida</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Aesthetic Tile did an amazing job on our kitchen backsplash. The attention to detail was incredible and they left everything spotless. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah M.</strong>
+                            <span>Groveland, FL</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Professional, punctual, and perfectionist. Our bathroom renovation exceeded expectations. The tile work is absolutely beautiful."</p>
+                        <div class="testimonial-author">
+                            <strong>Mike R.</strong>
+                            <span>Clermont, FL</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"From consultation to completion, the team was fantastic. Our new floor tiles look amazing and the installation was flawless."</p>
+                        <div class="testimonial-author">
+                            <strong>Jennifer L.</strong>
+                            <span>Winter Garden, FL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <h2>Ready to Transform Your Space?</h2>
+                        <p>Get a free estimate for your tile installation project. Professional craftsmanship, competitive pricing, and exceptional service guaranteed.</p>
+                        <div class="cta-features">
+                            <div class="feature">
+                                <svg class="feature-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>Free Estimates</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="feature-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>Licensed & Insured</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="feature-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>Quality Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-form">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="">Select Service</option>
+                                    <option value="kitchen-backsplash">Kitchen Backsplash</option>
+                                    <option value="bathroom-shower">Bathroom & Shower</option>
+                                    <option value="floor-tile">Floor Tile Installation</option>
+                                    <option value="fireplace">Fireplace</option>
+                                    <option value="special-project">Special Project</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Project Details" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary full-width">Get Free Estimate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Aesthetic Tiles. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/aesthetic-tile-logo.png" alt="Aesthetic Tile logo" class="footer-logo-img">
+                        <span class="footer-logo-text">Aesthetic Tile</span>
+                    </div>
+                    <p>Professional tile installation services in Central Florida. Expert craftsmanship for kitchens, bathrooms, and specialty projects.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aesthetictile/" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm10.5 1.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#kitchen-backsplash">Kitchen Backsplash</a></li>
+                        <li><a href="#bathroom-shower">Bathroom & Shower</a></li>
+                        <li><a href="#floor-tile">Floor Tile Installation</a></li>
+                        <li><a href="#fireplaces">Fireplaces</a></li>
+                        <li><a href="#special-projects">Special Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Groveland, FL</li>
+                        <li>Clermont, FL</li>
+                        <li>Minneola, FL</li>
+                        <li>Winter Garden, FL</li>
+                        <li>Surrounding Areas</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.07 22 2 13.93 2 3a1 1 0 011-1h3.49a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+                        <a href="tel:+15026507014">(502) 650-7014</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l7.4 5.55a1 1 0 001.2 0L20 8.24V18H4z"/></svg>
+                        <a href="mailto:office@aesthetictile.com">office@aesthetictile.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                        <span>Groveland, FL</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span>Mon–Fri 9am–5pm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aesthetic Tile. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>

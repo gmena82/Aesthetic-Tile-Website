@@ -1,70 +1,153 @@
-// Smooth scrolling for navigation links
+// Professional Aesthetic Tile Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-links a');
     
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 
-    // CTA button functionality
-    const ctaButton = document.querySelector('.cta-button');
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function() {
-            const gallerySection = document.querySelector('#gallery');
-            if (gallerySection) {
-                gallerySection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    }
-
-    // Contact button functionality
-    const contactButton = document.querySelector('.contact-button');
-    if (contactButton) {
-        contactButton.addEventListener('click', function() {
-            alert('Thank you for your interest! We will contact you soon.');
-        });
-    }
-
-    // Add scroll effect to navigation
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(102, 126, 234, 0.95)';
-        } else {
-            header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-        }
-    });
-
-    // Tile item hover effects
-    const tileItems = document.querySelectorAll('.tile-item');
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
     
-    tileItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+    window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            header.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+        } else {
+            header.style.boxShadow = '0 1px 2px 0 rgb(0 0 0 / 0.05)';
+        }
+        
+        lastScrollY = currentScrollY;
+    });
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinksContainer = document.querySelector('.nav-links');
+    
+    if (mobileMenuBtn && navLinksContainer) {
+        mobileMenuBtn.addEventListener('click', function() {
+            const isOpen = navLinksContainer.style.display === 'flex';
+            
+            if (isOpen) {
+                navLinksContainer.style.display = 'none';
+                mobileMenuBtn.classList.remove('active');
+            } else {
+                navLinksContainer.style.display = 'flex';
+                navLinksContainer.style.flexDirection = 'column';
+                navLinksContainer.style.position = 'absolute';
+                navLinksContainer.style.top = '100%';
+                navLinksContainer.style.left = '0';
+                navLinksContainer.style.right = '0';
+                navLinksContainer.style.background = 'white';
+                navLinksContainer.style.border = '1px solid var(--border-color)';
+                navLinksContainer.style.borderRadius = '0.5rem';
+                navLinksContainer.style.padding = '1rem';
+                navLinksContainer.style.boxShadow = 'var(--shadow-lg)';
+                navLinksContainer.style.zIndex = '1000';
+                mobileMenuBtn.classList.add('active');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !navLinksContainer.contains(e.target)) {
+                navLinksContainer.style.display = 'none';
+                mobileMenuBtn.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinksContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinksContainer.style.display = 'none';
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+    }
+
+    // Service card interactions
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-4px)';
+            this.style.boxShadow = '0 10px 15px -3px rgb(0 0 0 / 0.1)';
         });
         
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 1px 2px 0 rgb(0 0 0 / 0.05)';
         });
     });
 
-    // Add loading animation
+    // Contact form handling
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const service = this.querySelector('select').value;
+            const details = this.querySelector('textarea').value;
+            
+            // Basic validation
+            if (!name || !email || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+            const cleanPhone = phone.replace(/\D/g, '');
+            if (cleanPhone.length < 10) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('Thank you for your request! We will contact you within 24 hours to schedule your free estimate.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+    }
+
+    // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -79,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe sections for animation
+    // Observe sections for scroll animations
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.style.opacity = '0';
@@ -88,44 +171,138 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Mobile menu toggle (for future mobile optimization)
-    function createMobileMenu() {
-        const nav = document.querySelector('nav');
-        const navLinks = document.querySelector('.nav-links');
-        
-        // Create mobile menu button
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.innerHTML = '☰';
-        mobileMenuBtn.className = 'mobile-menu-btn';
-        mobileMenuBtn.style.display = 'none';
-        mobileMenuBtn.style.background = 'none';
-        mobileMenuBtn.style.border = 'none';
-        mobileMenuBtn.style.color = 'white';
-        mobileMenuBtn.style.fontSize = '1.5rem';
-        mobileMenuBtn.style.cursor = 'pointer';
-        
-        nav.appendChild(mobileMenuBtn);
-        
-        // Toggle mobile menu
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('mobile-active');
+    // Observe service cards
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        observer.observe(card);
+    });
+
+    // Observe testimonial cards
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        observer.observe(card);
+    });
+
+    // CTA button interactions
+    const ctaButtons = document.querySelectorAll('.btn-primary, .btn-secondary, .cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-1px)';
         });
         
-        // Show/hide mobile menu button based on screen size
-        function checkScreenSize() {
-            if (window.innerWidth <= 768) {
-                mobileMenuBtn.style.display = 'block';
-                navLinks.style.display = navLinks.classList.contains('mobile-active') ? 'flex' : 'none';
-            } else {
-                mobileMenuBtn.style.display = 'none';
-                navLinks.style.display = 'flex';
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Phone number formatting
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    phoneInputs.forEach(input => {
+        input.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            let formattedValue = '';
+            
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    formattedValue = `(${value}`;
+                } else if (value.length <= 6) {
+                    formattedValue = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    formattedValue = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
             }
-        }
+            
+            e.target.value = formattedValue;
+        });
+    });
+
+    // Dropdown menu functionality for desktop
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        let timeoutId;
         
-        window.addEventListener('resize', checkScreenSize);
-        checkScreenSize();
-    }
+        dropdown.addEventListener('mouseenter', function() {
+            clearTimeout(timeoutId);
+            menu.style.opacity = '1';
+            menu.style.visibility = 'visible';
+            menu.style.transform = 'translateY(0)';
+        });
+        
+        dropdown.addEventListener('mouseleave', function() {
+            timeoutId = setTimeout(() => {
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
+                menu.style.transform = 'translateY(-0.5rem)';
+            }, 150);
+        });
+    });
+
+    // Lazy loading for images
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.src;
+                img.classList.remove('lazy');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => {
+        imageObserver.observe(img);
+    });
+
+    // Scroll to top functionality
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerHTML = '↑';
+    scrollToTopBtn.className = 'scroll-to-top';
+    scrollToTopBtn.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 3rem;
+        height: 3rem;
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    `;
     
-    createMobileMenu();
+    document.body.appendChild(scrollToTopBtn);
+    
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            scrollToTopBtn.style.opacity = '1';
+            scrollToTopBtn.style.visibility = 'visible';
+        } else {
+            scrollToTopBtn.style.opacity = '0';
+            scrollToTopBtn.style.visibility = 'hidden';
+        }
+    });
+
+    // Initialize all animations and interactions
+    console.log('Aesthetic Tile website loaded successfully!');
 });
 
