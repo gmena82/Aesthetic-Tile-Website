@@ -39,45 +39,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile menu functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinksContainer = document.querySelector('.nav-links');
+    const navMenu = document.querySelector('.nav-menu');
     
-    if (mobileMenuBtn && navLinksContainer) {
+    if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
-            const isOpen = navLinksContainer.style.display === 'flex';
-            
-            if (isOpen) {
-                navLinksContainer.style.display = 'none';
-                mobileMenuBtn.classList.remove('active');
-            } else {
-                navLinksContainer.style.display = 'flex';
-                navLinksContainer.style.flexDirection = 'column';
-                navLinksContainer.style.position = 'absolute';
-                navLinksContainer.style.top = '100%';
-                navLinksContainer.style.left = '0';
-                navLinksContainer.style.right = '0';
-                navLinksContainer.style.background = 'white';
-                navLinksContainer.style.border = '1px solid var(--border-color)';
-                navLinksContainer.style.borderRadius = '0.5rem';
-                navLinksContainer.style.padding = '1rem';
-                navLinksContainer.style.boxShadow = 'var(--shadow-lg)';
-                navLinksContainer.style.zIndex = '1000';
-                mobileMenuBtn.classList.add('active');
-            }
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
-            if (!mobileMenuBtn.contains(e.target) && !navLinksContainer.contains(e.target)) {
-                navLinksContainer.style.display = 'none';
+            if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
                 mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
             }
         });
 
         // Close mobile menu when clicking on a link
-        navLinksContainer.querySelectorAll('a').forEach(link => {
+        navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function() {
-                navLinksContainer.style.display = 'none';
                 mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
             });
         });
     }
