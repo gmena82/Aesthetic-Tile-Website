@@ -1669,8 +1669,54 @@ body {
     margin: 0 auto;
 }
 
-/* Story Section */
+/* About Us Story Section */
 .about-story {
+    margin: 4rem 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-text h2 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.story-image {
+    text-align: center;
+}
+
+.brad-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .story-text h2 {
+        font-size: 2rem;
+    }
+}
     margin-bottom: 4rem;
 }
 
