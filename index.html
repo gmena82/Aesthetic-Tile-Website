@@ -7,6 +7,13 @@
     <meta name="description" content="Professional tile installation for kitchens, bathrooms, and flooring in Groveland, FL. Expert craftsmanship for backsplashes, showers, and specialty projects.">
     <link rel="icon" type="image/png" href="images/aesthetic-tile-logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .service-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -70,20 +77,20 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li class="dropdown">
-                                <a href="Services.html" class="dropdown-toggle">Services</a>
+                                <a href="services.html" class="dropdown-toggle">Services</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="Kitchen-Backsplashes.html">Kitchen Backsplash</a></li>
-                                    <li><a href="Bathroom-Shower.html">Bathroom &amp; Shower</a></li>
-                                    <li><a href="Floor-Tile-Installation.html">Floor Tile Installation</a></li>
-                                    <li><a href="Fireplaces.html">Fireplaces</a></li>
-                                    <li><a href="Special-Projects.html">Special Projects</a></li>
+                                    <li><a href="kitchen-backsplashes.html">Kitchen Backsplash</a></li>
+                                    <li><a href="bathroom-showers.html">Bathroom &amp; Shower</a></li>
+                                    <li><a href="floor-tile-installation.html">Floor Tile Installation</a></li>
+                                    <li><a href="fireplaces.html">Fireplaces</a></li>
+                                    <li><a href="special-projects.html">Special Projects</a></li>
                                 </ul>
                             </li>
-                            <li><a href="Gallery.html">Gallery</a></li>
-                            <li><a href="Contact-Us.html">Contact</a></li>
-                            <li><a href="Blog.html">Blog</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                         </ul>
-                        <a href="Contact-Us.html" class="cta-button">Request a Quote</a>
+                        <a href="contact.html" class="cta-button">Request a Quote</a>
                     </div>
                 </nav>
             </div>
@@ -108,7 +115,7 @@
                     <p>Detail-driven craftsmanship for kitchens, bathrooms, and whole-home flooring. Local crew, clean job sites, and finishes that last.</p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn-primary">Request a Quote</a>
-                        <a href="#gallery" class="btn-secondary">View Gallery</a>
+                        <a href="gallery.html" class="btn-secondary">View Gallery</a>
                     </div>
                     <div class="hero-features">
                         <span>Five‑Star Service</span>
@@ -124,7 +131,6 @@
                     <p class="hero-subtitle">Serving Groveland, Clermont, Minneola, Winter Garden, Orlando & nearby communities</p>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Video Section -->
@@ -156,7 +162,7 @@
                         <div class="section-badge">AWARD-WINNING MASTER CRAFTSMEN</div>
                         <h2>We Are The Premier Tile Installation Company In Central Florida.</h2>
                         <p>Aesthetic Tile specializes in professional tile installation for residential and commercial projects. With over 3 generations of experience in high-quality craftsmanship, we are one of the premier tile installation contractors in the Groveland area. From kitchen backsplashes to bathroom renovations, we set the standard in professional skill, experience, and efficiency. Our team specializes in detailed prep work, clean installations, and finishes that last. Reach out to us, and let's bring your vision to life.</p>
-                        <a href="#about" class="btn-secondary">About Us</a>
+                        <a href="about.html" class="btn-secondary">About Us</a>
                     </div>
                 </div>
             </div>
@@ -171,69 +177,79 @@
                 </div>
                 
                 <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/img/kitchen-backsplash.png" alt="Modern kitchen backsplash with geometric metallic tiles" loading="lazy">
-                            <div class="service-overlay"></div>
-                            <div class="service-title">Kitchen Backsplash</div>
+                    <a href="kitchen-backsplashes.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="images/img/kitchen-backsplash.png" alt="Modern kitchen backsplash with geometric metallic tiles" loading="lazy">
+                                <div class="service-overlay"></div>
+                                <div class="service-title">Kitchen Backsplash</div>
+                            </div>
+                            <div class="service-footer">
+                                <span>Learn more</span>
+                                <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                            </div>
                         </div>
-                        <div class="service-footer">
-                            <span>Learn more</span>
-                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
-                        </div>
-                    </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/img/bathroom-shower.png" alt="Freestanding tub with marble-look wall tile and wood shelves" loading="lazy">
-                            <div class="service-overlay"></div>
-                            <div class="service-title">Bathroom & Tile Shower Installation</div>
+                    <a href="bathroom-showers.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="images/img/bathroom-shower.png" alt="Freestanding tub with marble-look wall tile and wood shelves" loading="lazy">
+                                <div class="service-overlay"></div>
+                                <div class="service-title">Bathroom & Tile Shower Installation</div>
+                            </div>
+                            <div class="service-footer">
+                                <span>Learn more</span>
+                                <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                            </div>
                         </div>
-                        <div class="service-footer">
-                            <span>Learn more</span>
-                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
-                        </div>
-                    </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/img/floor-tile.png" alt="Close-up of mosaic triangles used as an accent" loading="lazy">
-                            <div class="service-overlay"></div>
-                            <div class="service-title">Floor Tile Installation</div>
+                    <a href="floor-tile-installation.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="images/img/floor-tile.png" alt="Close-up of mosaic triangles used as an accent" loading="lazy">
+                                <div class="service-overlay"></div>
+                                <div class="service-title">Floor Tile Installation</div>
+                            </div>
+                            <div class="service-footer">
+                                <span>Learn more</span>
+                                <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                            </div>
                         </div>
-                        <div class="service-footer">
-                            <span>Learn more</span>
-                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
-                        </div>
-                    </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/img/fireplace.png" alt="Tiled fireplace wall with TV mounted above" loading="lazy">
-                            <div class="service-overlay"></div>
-                            <div class="service-title">Fire Places</div>
+                    <a href="fireplaces.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="images/img/fireplace.png" alt="Tiled fireplace wall with TV mounted above" loading="lazy">
+                                <div class="service-overlay"></div>
+                                <div class="service-title">Fire Places</div>
+                            </div>
+                            <div class="service-footer">
+                                <span>Learn more</span>
+                                <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                            </div>
                         </div>
-                        <div class="service-footer">
-                            <span>Learn more</span>
-                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
-                        </div>
-                    </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/img/special-projects.png" alt="Gradient vertical mosaic pattern" loading="lazy">
-                            <div class="service-overlay"></div>
-                            <div class="service-title">Special Projects</div>
+                    <a href="special-projects.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="images/img/special-projects.png" alt="Gradient vertical mosaic pattern" loading="lazy">
+                                <div class="service-overlay"></div>
+                                <div class="service-title">Special Projects</div>
+                            </div>
+                            <div class="service-footer">
+                                <span>Learn more</span>
+                                <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+                            </div>
                         </div>
-                        <div class="service-footer">
-                            <span>Learn more</span>
-                            <svg class="arrow-icon" viewBox="0 0 20 20"><path fill="currentColor" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="services-cta">
-                    <a href="#contact" class="btn-primary">Request a Quote</a>
+                    <a href="contact.html" class="btn-primary">Request a Quote</a>
                 </div>
             </div>
         </section>
@@ -350,11 +366,11 @@
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="Kitchen-Backsplashes.html">Kitchen Backsplash</a></li>
-                        <li><a href="Bathroom-Shower.html">Bathroom & Shower</a></li>
-                        <li><a href="Floor-Tile-Installation.html">Floor Tile Installation</a></li>
-                        <li><a href="Fireplaces.html">Fireplaces</a></li>
-                        <li><a href="Special-Projects.html">Special Projects</a></li>
+                        <li><a href="kitchen-backsplashes.html">Kitchen Backsplash</a></li>
+                        <li><a href="bathroom-showers.html">Bathroom & Shower</a></li>
+                        <li><a href="floor-tile-installation.html">Floor Tile Installation</a></li>
+                        <li><a href="fireplaces.html">Fireplaces</a></li>
+                        <li><a href="special-projects.html">Special Projects</a></li>
                     </ul>
                 </div>
 
@@ -387,6 +403,7 @@
                     
                     <div class="social-links">
                         <div class="social-icons">
+
                             <a href="https://www.facebook.com/AestheticTileCo" target="_blank" class="social-link">
                                 <svg viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                             </a>
