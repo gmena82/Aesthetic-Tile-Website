@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic Tile - Expert Tile Installation | Groveland, FL</title>
-    <meta name="description" content="Professional tile installation for kitchens, bathrooms, and flooring in Groveland, FL. Expert craftsmanship for backsplashes, showers, and specialty projects.">
+    <title>Project Gallery | Aesthetic Tile | Groveland, FL</title>
+    <meta name="description" content="View the project gallery of Aesthetic Tile. See examples of our expert craftsmanship in kitchen backsplashes, bathroom showers, and floor tile installations in Central Florida.">
     <link rel="icon" type="image/png" href="images/aesthetic-tile-logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,53 +47,48 @@
                 </div>
             </div>
         </div>
-
         <!-- Main navigation -->
         <nav class="main-nav">
             <div class="container">
                 <nav class="navbar">
-                    <a href="#home" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="images/aesthetic-tile-logo.png" alt="Aesthetic Tile logo" class="logo-img">
                         <span class="logo-text">Aesthetic Tile</span>
                     </a>
-                    
                     <!-- Mobile Menu Button -->
                     <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                     </button>
-                    
                     <!-- Right side navigation and CTA -->
                     <div class="nav-right">
                         <ul class="nav-menu">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li class="dropdown">
-                                <a href="Services.html" class="dropdown-toggle">Services</a>
+                                <a href="index.html#services" class="dropdown-toggle">Services</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="Kitchen-Backsplashes.html">Kitchen Backsplash</a></li>
-                                    <li><a href="Bathroom-Shower.html">Bathroom &amp; Shower</a></li>
-                                    <li><a href="Floor-Tile-Installation.html">Floor Tile Installation</a></li>
-                                    <li><a href="Fireplaces.html">Fireplaces</a></li>
-                                    <li><a href="Special-Projects.html">Special Projects</a></li>
+                                    <li><a href="kitchen-backsplashes.html">Kitchen Backsplash</a></li>
+                                    <li><a href="bathroom-showers.html">Bathroom &amp; Shower</a></li>
+                                    <li><a href="floor-tile-installation.html">Floor Tile Installation</a></li>
+                                    <li><a href="fireplaces.html">Fireplaces</a></li>
+                                    <li><a href="special-projects.html">Special Projects</a></li>
                                 </ul>
                             </li>
-                            <li><a href="Gallery.html">Gallery</a></li>
-                            <li><a href="Contact-Us.html">Contact</a></li>
-                            <li><a href="Blog.html">Blog</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                         </ul>
-                        <a href="Contact-Us.html" class="cta-button">Request a Quote</a>
+                        <a href="contact.html" class="cta-button">Request a Quote</a>
                     </div>
                 </nav>
             </div>
         </nav>
     </header>
-
-
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero" style="min-height: 62vh;">
+        <section class="hero" style="min-height: 62vh;">
             <div class="hero-bg">
                 <img src="images/AboutUs-NoText.png" alt="Gallery of beautiful tile projects" class="hero-image">
                 <div class="hero-overlay"></div>
@@ -105,7 +100,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Intro Text Section -->
         <section class="gallery-intro">
             <div class="container">
@@ -113,7 +107,6 @@
                 <p>Browse through a collection of our recent projects. From stunning kitchen backsplashes to luxurious bathroom renovations and durable, elegant floors, each project reflects our commitment to precision, quality, and timeless design. We hope this gallery inspires your next home transformation.</p>
             </div>
         </section>
-
         <!-- Gallery Grid Section -->
         <section class="gallery-section">
             <div class="container">
@@ -166,7 +159,7 @@
                         <img src="https://placehold.co/700x500/94a3b8/ffffff?text=Project+12" alt="Gallery image 12">
                         <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
                     </div>
-                     <div class="gallery-item">
+                    <div class="gallery-item">
                         <img src="https://placehold.co/700x500/0e7c86/ffffff?text=Project+13" alt="Gallery image 13">
                         <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
                     </div>
@@ -181,13 +174,11 @@
                 </div>
             </div>
         </section>
-
         <!-- The Modal/Lightbox -->
         <div id="lightboxModal" class="lightbox-modal">
             <span class="lightbox-close">&times;</span>
             <img class="lightbox-content" id="lightboxImage">
         </div>
-
         <!-- CTA Section -->
         <section id="contact" class="cta-section">
             <div class="cta-bg">
@@ -245,7 +236,6 @@
             </div>
         </section>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -307,41 +297,56 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the modal
-            var modal = document.getElementById("lightboxModal");
-
-            // Get the image and insert it inside the modal
-            var modalImg = document.getElementById("lightboxImage");
-            var galleryItems = document.querySelectorAll(".gallery-item");
-
-            galleryItems.forEach(item => {
-                item.onclick = function() {
-                    modal.style.display = "block";
-                    // Create the 9x16 placeholder URL from the original 7x5 URL
-                    let originalSrc = this.querySelector('img').src;
-                    let newSrc = originalSrc.replace('700x500', '900x1600');
-                    modalImg.src = newSrc;
-                }
-            });
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("lightbox-close")[0];
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-
-            // Also close the modal if the user clicks anywhere on the background
-            modal.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        });
+    <script src="js/script.js"></script>
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Aesthetic Tile",
+        "description": "View the project gallery of Aesthetic Tile. See examples of our expert craftsmanship in kitchen backsplashes, bathroom showers, and floor tile installations in Central Florida.",
+        "url": "https://aesthetic-tile-website.vercel.app",
+        "telephone": "+1-502-650-7014",
+        "email": "office@aesthetictile.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1195 Greenley Ave",
+            "addressLocality": "Groveland",
+            "addressRegion": "FL",
+            "postalCode": "34736",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.5683",
+            "longitude": "-81.8412"
+        },
+        "areaServed": [
+            "Groveland, FL",
+            "Clermont, FL",
+            "Minneola, FL",
+            "Winter Garden, FL",
+            "Orlando, FL"
+        ],
+        "serviceType": [
+            "Bathroom tile installation",
+            "Kitchen backsplash installation",
+            "Floor tile installation",
+            "Tile repair",
+            "Demolition and surface prep"
+        ],
+        "foundingDate": "2010",
+        "founder": {
+            "@type": "Person",
+            "name": "Brad"
+        },
+        "sameAs": [
+            "https://www.facebook.com/AestheticTileCo",
+            "https://x.com/AestheticTileCo",
+            "https://www.youtube.com/@AestheticTile",
+            "https://www.instagram.com/aesthetictile/"
+        ]
+    }
     </script>
 </body>
 </html>
