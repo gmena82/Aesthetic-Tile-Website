@@ -7,6 +7,119 @@
     <meta name="description" content="View the project gallery of Aesthetic Tile. See examples of our expert craftsmanship in kitchen backsplashes, bathroom showers, and floor tile installations in Central Florida.">
     <link rel="icon" type="image/png" href="images/aesthetic-tile-logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Styles for Gallery Page - Add to style.css */
+        .gallery-intro {
+            text-align: center;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .gallery-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .gallery-intro p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        .gallery-section {
+            padding: 0 1rem 5rem 1rem;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+        }
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 3rem;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .magnify-icon {
+            font-weight: 200;
+        }
+
+        /* Lightbox Modal Styles */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-width: 80%;
+            height: auto;
+            max-height: 80vh;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* Responsive Grid */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -67,7 +180,7 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li class="dropdown">
-                                <a href="index.html#services" class="dropdown-toggle">Services</a>
+                                <a href="services.html" class="dropdown-toggle">Services</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="kitchen-backsplashes.html">Kitchen Backsplash</a></li>
                                     <li><a href="bathroom-showers.html">Bathroom &amp; Shower</a></li>
@@ -113,63 +226,63 @@
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/0e7c86/ffffff?text=Project+1" alt="Gallery image 1">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/1e293b/ffffff?text=Project+2" alt="Gallery image 2">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/64748b/ffffff?text=Project+3" alt="Gallery image 3">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/94a3b8/ffffff?text=Project+4" alt="Gallery image 4">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/0e7c86/ffffff?text=Project+5" alt="Gallery image 5">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/1e293b/ffffff?text=Project+6" alt="Gallery image 6">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/64748b/ffffff?text=Project+7" alt="Gallery image 7">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/94a3b8/ffffff?text=Project+8" alt="Gallery image 8">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/0e7c86/ffffff?text=Project+9" alt="Gallery image 9">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/1e293b/ffffff?text=Project+10" alt="Gallery image 10">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/64748b/ffffff?text=Project+11" alt="Gallery image 11">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/94a3b8/ffffff?text=Project+12" alt="Gallery image 12">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/0e7c86/ffffff?text=Project+13" alt="Gallery image 13">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/1e293b/ffffff?text=Project+14" alt="Gallery image 14">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://placehold.co/700x500/64748b/ffffff?text=Project+15" alt="Gallery image 15">
-                        <div class="gallery-overlay"><span class="magnify-icon">&#43;</span></div>
+                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
                     </div>
                 </div>
             </div>
@@ -242,8 +355,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/aesthetic-tile-logo.png" alt="Aesthetic Tile logo" class="footer-logo-img">
-                        <span class="footer-logo-text">Aesthetic Tile</span>
+                        <img src="images/aesthetic-tile-logo.png" alt="Aesthetic Tile logo" class="logo-img">
+                        <span class="logo-text">Aesthetic Tile</span>
                     </div>
                     <p>Professional tile installation services in Central Florida. Expert craftsmanship for kitchens, bathrooms, and specialty projects.</p>
                 </div>
@@ -297,7 +410,34 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("lightboxModal");
+            var modalImg = document.getElementById("lightboxImage");
+            var galleryItems = document.querySelectorAll(".gallery-item");
+
+            galleryItems.forEach(item => {
+                item.onclick = function() {
+                    modal.style.display = "block";
+                    let originalSrc = this.querySelector('img').src;
+                    let newSrc = originalSrc.replace('700x500', '900x1600');
+                    modalImg.src = newSrc;
+                }
+            });
+
+            var span = document.getElementsByClassName("lightbox-close")[0];
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            modal.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
     {
