@@ -7,6 +7,86 @@
     <meta name="description" content="Explore the Aesthetic Tile blog for expert tips on tile installation, design trends for kitchens and bathrooms, and project showcases from Central Florida.">
     <link rel="icon" type="image/png" href="images/aesthetic-tile-logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Styles for Blog Page - Add to style.css */
+        .blog-intro {
+            text-align: center;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .blog-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .blog-intro p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        .blog-section {
+            padding: 0 1rem 5rem 1rem;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .blog-card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.05);
+        }
+        .blog-card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .blog-card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .blog-card-content .blog-date {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .blog-card-content p {
+            color: var(--text-secondary);
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+        .blog-card-content .btn-primary {
+            align-self: flex-start;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 992px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -67,7 +147,7 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li class="dropdown">
-                                <a href="index.html#services" class="dropdown-toggle">Services</a>
+                                <a href="services.html" class="dropdown-toggle">Services</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="kitchen-backsplashes.html">Kitchen Backsplash</a></li>
                                     <li><a href="bathroom-showers.html">Bathroom &amp; Shower</a></li>
@@ -116,9 +196,10 @@
                             <img src="https://placehold.co/1600x900/0e7c86/ffffff?text=Tile+Trends" alt="Blog post image 1">
                         </div>
                         <div class="blog-card-content">
+                            <p class="blog-date">September 1, 2025</p>
                             <h3>Top 5 Tile Trends for Kitchens in 2025</h3>
                             <p>Discover the latest styles, colors, and patterns that are making a splash in kitchen design this year. From bold geometrics to earthy tones, we cover what's hot.</p>
-                            <a href="#" class="btn-primary">Read More</a>
+                            <a href="#" class="btn-primary">Learn More</a>
                         </div>
                     </div>
                     <div class="blog-card">
@@ -126,9 +207,10 @@
                             <img src="https://placehold.co/1600x900/1e293b/ffffff?text=Shower+Tile" alt="Blog post image 2">
                         </div>
                         <div class="blog-card-content">
+                             <p class="blog-date">August 28, 2025</p>
                             <h3>Creating a Spa-Like Retreat: Bathroom Shower Tile Ideas</h3>
                             <p>Transform your bathroom into a personal oasis. We explore tile choices that can create a serene and luxurious shower experience, from natural stone to mosaics.</p>
-                            <a href="#" class="btn-primary">Read More</a>
+                            <a href="#" class="btn-primary">Learn More</a>
                         </div>
                     </div>
                     <div class="blog-card">
@@ -136,39 +218,10 @@
                             <img src="https://placehold.co/1600x900/64748b/ffffff?text=Tile+Care" alt="Blog post image 3">
                         </div>
                         <div class="blog-card-content">
+                            <p class="blog-date">August 25, 2025</p>
                             <h3>The Ultimate Guide to Cleaning and Maintaining Your Grout</h3>
                             <p>Keep your tile looking brand new. Our experts share their best-kept secrets for cleaning grout and preventing common issues like mildew and staining.</p>
-                            <a href="#" class="btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-card-image">
-                            <img src="https://placehold.co/1600x900/94a3b8/ffffff?text=Project+Showcase" alt="Blog post image 4">
-                        </div>
-                        <div class="blog-card-content">
-                            <h3>Project Showcase: A Modern Farmhouse Kitchen Backsplash</h3>
-                            <p>Take a closer look at one of our recent projects in Winter Garden. See how a simple tile choice completely transformed the heart of this home.</p>
-                            <a href="#" class="btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-card-image">
-                            <img src="https://placehold.co/1600x900/0e7c86/ffffff?text=Floor+Tile" alt="Blog post image 5">
-                        </div>
-                        <div class="blog-card-content">
-                            <h3>Durability Meets Design: Choosing the Right Floor Tile</h3>
-                            <p>Flooring needs to be tough and beautiful. Learn about the different types of floor tiles and how to choose the best option for high-traffic areas in your home.</p>
-                            <a href="#" class="btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-card-image">
-                            <img src="https://placehold.co/1600x900/1e293b/ffffff?text=Fireplace+Tile" alt="Blog post image 6">
-                        </div>
-                        <div class="blog-card-content">
-                            <h3>Making a Statement: Creative Tile Ideas for Your Fireplace</h3>
-                            <p>The fireplace is often the centerpiece of a room. Explore creative tile applications that can turn your fireplace into a stunning focal point.</p>
-                            <a href="#" class="btn-primary">Read More</a>
+                            <a href="#" class="btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -237,7 +290,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/aesthetic-tile-logo.png" alt="Aesthetic Tile logo" class="footer-logo-img">
+                        <img src="images/aesthetic-tile-logo.png" alt="Aesthetic Tile logo" class="logo-img">
                         <span class="footer-logo-text">Aesthetic Tile</span>
                     </div>
                     <p>Professional tile installation services in Central Florida. Expert craftsmanship for kitchens, bathrooms, and specialty projects.</p>
