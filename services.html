@@ -7,6 +7,9 @@
     <meta name="description" content="Aesthetic Tile offers expert tile installation services in Central Florida, including custom kitchen backsplashes, bathroom & shower tile, flooring, fireplaces, and special projects.">
     <link rel="icon" type="image/png" href="images/aesthetic-tile-logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -94,7 +97,7 @@
                 <div class="hero-overlay"></div>
             </div>
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-content" style="max-width: 48rem; text-align: center; margin: 0 auto;">
                     <h1>Our Services</h1>
                     <p>Providing exceptional tile installation and repair services with a focus on quality and craftsmanship.</p>
                 </div>
@@ -102,73 +105,88 @@
         </section>
 
         <!-- Services Content Section -->
-        <section class="services-content">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Tile Installation Services</h2>
-                </div>
+        <div class="services-page-content">
 
-                <!-- Kitchen Backsplashes -->
-                <div id="kitchen-backsplash" class="service-item content-grid">
-                     <div class="content-text">
-                        <h3>Kitchen Backsplashes</h3>
-                        <p>A new backsplash can transform your kitchen. We install durable, easy-to-clean backsplashes that protect your walls and enhance your kitchen’s design, making it a focal point of your home.</p>
-                        <a href="kitchen-backsplashes.html" class="btn-secondary">Learn More</a>
-                    </div>
-                    <div class="content-image">
-                        <img src="images/img/kitchen-backsplash.png" alt="Kitchen Backsplash Installation">
+            <!-- Kitchen Backsplashes -->
+            <section id="kitchen-backsplash" class="expertise">
+                <div class="container">
+                    <div class="expertise-content">
+                        <div class="expertise-text">
+                            <h3>Kitchen Backsplashes</h3>
+                            <p>A new backsplash can transform your kitchen. We install durable, easy-to-clean backsplashes that protect your walls and enhance your kitchen’s design, making it a focal point of your home.</p>
+                            <a href="kitchen-backsplashes.html" class="btn-outline">Learn More</a>
+                        </div>
+                        <div class="expertise-image">
+                            <img src="images/img/kitchen-backsplash.png" alt="Kitchen Backsplash Installation" class="expertise-img">
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Bathroom Tile -->
-                <div id="bathroom-shower" class="service-item content-grid">
-                    <div class="content-image">
-                        <img src="images/img/bathroom-shower.png" alt="Bathroom and Shower Tile Installation">
-                    </div>
-                    <div class="content-text">
-                        <h3>Bathroom & Shower Tile</h3>
-                        <p>From spa-like showers to elegant bathroom floors, we provide custom tile installations that combine beauty and functionality. We ensure every detail is perfect, creating a space you’ll love for years to come.</p>
-                        <a href="bathroom-showers.html" class="btn-secondary">Learn More</a>
+            <!-- Bathroom Tile -->
+            <section id="bathroom-shower" class="expertise" style="background-color: var(--bg-light);">
+                <div class="container">
+                    <div class="expertise-content">
+                        <div class="expertise-image">
+                            <img src="images/img/bathroom-shower.png" alt="Bathroom and Shower Tile Installation" class="expertise-img">
+                        </div>
+                        <div class="expertise-text">
+                            <h3>Bathroom & Shower Tile</h3>
+                            <p>From spa-like showers to elegant bathroom floors, we provide custom tile installations that combine beauty and functionality. We ensure every detail is perfect, creating a space you’ll love for years to come.</p>
+                            <a href="bathroom-showers.html" class="btn-outline">Learn More</a>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Floor Tile Installation -->
-                <div id="floor-tile" class="service-item content-grid">
-                     <div class="content-text">
-                        <h3>Floor Tile Installation</h3>
-                        <p>We offer professional floor tile installation for any room in your home. Our meticulous approach ensures a level, durable, and beautiful surface that will stand up to daily life while enhancing your home’s value.</p>
-                        <a href="floor-tile-installation.html" class="btn-secondary">Learn More</a>
-                    </div>
-                    <div class="content-image">
-                        <img src="images/img/floor-tile.png" alt="Floor Tile Installation">
-                    </div>
-                </div>
-                
-                <!-- Fireplaces -->
-                <div id="fireplaces" class="service-item content-grid">
-                    <div class="content-image">
-                        <img src="images/img/fireplace.png" alt="Fireplace Tile Installation">
-                    </div>
-                    <div class="content-text">
-                        <h3>Fireplaces</h3>
-                        <p>Transform your fireplace into a stunning centerpiece with our custom tile work. We handle a variety of styles to create a cozy and inviting atmosphere in your living space.</p>
-                        <a href="fireplaces.html" class="btn-secondary">Learn More</a>
+            <!-- Floor Tile Installation -->
+            <section id="floor-tile" class="expertise">
+                <div class="container">
+                    <div class="expertise-content">
+                        <div class="expertise-text">
+                            <h3>Floor Tile Installation</h3>
+                            <p>We offer professional floor tile installation for any room in your home. Our meticulous approach ensures a level, durable, and beautiful surface that will stand up to daily life while enhancing your home’s value.</p>
+                            <a href="floor-tile-installation.html" class="btn-outline">Learn More</a>
+                        </div>
+                        <div class="expertise-image">
+                            <img src="images/img/floor-tile.png" alt="Floor Tile Installation" class="expertise-img">
+                        </div>
                     </div>
                 </div>
+            </section>
+            
+            <!-- Fireplaces -->
+            <section id="fireplaces" class="expertise" style="background-color: var(--bg-light);">
+                <div class="container">
+                    <div class="expertise-content">
+                        <div class="expertise-image">
+                            <img src="images/img/fireplace.png" alt="Fireplace Tile Installation" class="expertise-img">
+                        </div>
+                        <div class="expertise-text">
+                            <h3>Fireplaces</h3>
+                            <p>Transform your fireplace into a stunning centerpiece with our custom tile work. We handle a variety of styles to create a cozy and inviting atmosphere in your living space.</p>
+                            <a href="fireplaces.html" class="btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <!-- Special Projects -->
-                <div id="special-projects" class="service-item content-grid">
-                    <div class="content-text">
-                        <h3>Special Projects</h3>
-                        <p>From custom mosaics to outdoor patios, we bring creativity and precision to unique tile applications. If you have a special project in mind, we have the expertise to bring it to life.</p>
-                        <a href="special-projects.html" class="btn-secondary">Learn More</a>
-                    </div>
-                    <div class="content-image">
-                        <img src="images/img/special-projects.png" alt="Special Projects Tile Installation">
+            <!-- Special Projects -->
+            <section id="special-projects" class="expertise">
+                <div class="container">
+                    <div class="expertise-content">
+                        <div class="expertise-text">
+                            <h3>Special Projects</h3>
+                            <p>From custom mosaics to outdoor patios, we bring creativity and precision to unique tile applications. If you have a special project in mind, we have the expertise to bring it to life.</p>
+                            <a href="special-projects.html" class="btn-outline">Learn More</a>
+                        </div>
+                        <div class="expertise-image">
+                            <img src="images/img/special-projects.png" alt="Special Projects Tile Installation" class="expertise-img">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         
         <!-- CTA Section -->
         <section id="contact" class="cta-section">
