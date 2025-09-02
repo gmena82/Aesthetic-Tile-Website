@@ -7,6 +7,9 @@
     <meta name="description" content="Contact Aesthetic Tile for a free estimate on your tile installation project. Serving Groveland, Clermont, and Central Florida. Call us or fill out our online form.">
     <link rel="icon" type="image/png" href="images/aesthetic-tile-logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -67,7 +70,7 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li class="dropdown">
-                                <a href="index.html#services" class="dropdown-toggle">Services</a>
+                                <a href="services.html" class="dropdown-toggle">Services</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="kitchen-backsplashes.html">Kitchen Backsplash</a></li>
                                     <li><a href="bathroom-showers.html">Bathroom &amp; Shower</a></li>
@@ -88,53 +91,42 @@
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="hero contact-hero">
+        <section class="hero" style="min-height: 62vh;">
             <div class="hero-bg">
-                <img src="images/AboutUs-NoText.png" alt="Contact Aesthetic Tile for a free quote" class="hero-image">
+                <img src="images/contact-bg.webp" alt="Contact Aesthetic Tile for a free quote" class="hero-image">
                 <div class="hero-overlay"></div>
             </div>
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-content" style="max-width: 48rem; text-align: center; margin: 0 auto;">
                     <h1>Contact Us</h1>
                     <p>Ready to start your project? Let's talk.</p>
                 </div>
             </div>
         </section>
+
         <!-- Contact Section -->
-        <section class="contact-section">
+        <section class="cta-section" style="background: var(--white); padding: 5rem 0;">
             <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info-block">
-                        <div class="contact-item-large">
-                            <div class="icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                            <div class="text-content">
-                                <h3>Phone</h3>
+                <div class="cta-content">
+                    <div class="cta-text" style="color: var(--text-primary);">
+                        <h2 style="color: var(--text-primary);">Get in Touch</h2>
+                        <p style="color: var(--text-secondary);">Have a question or need a quote? Fill out the form, and we'll get back to you shortly. You can also reach us by phone or email.</p>
+                        <div class="contact-page-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.07 22 2 13.93 2 3a1 1 0 011-1h3.49a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"></path></svg>
                                 <a href="tel:+15026507014">(502) 650-7014</a>
                             </div>
-                        </div>
-                        <div class="contact-item-large">
-                            <div class="icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </div>
-                            <div class="text-content">
-                                <h3>Email</h3>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l7.4 5.55a1 1 0 001.2 0L20 8.24V18H4z"></path></svg>
                                 <a href="mailto:office@aesthetictile.com">office@aesthetictile.com</a>
                             </div>
-                        </div>
-                        <div class="contact-item-large">
-                            <div class="icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            </div>
-                            <div class="text-content">
-                                <h3>Address</h3>
-                                <p>1195 Greenley Ave<br>Groveland, FL 34736</p>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"></path></svg>
+                                <span>1195 Greenley Ave, Groveland, FL 34736</span>
                             </div>
                         </div>
                     </div>
                     <div class="cta-form">
-                        <h2>Send Us a Message</h2>
                         <form class="contact-form">
                             <div class="form-group">
                                 <input type="text" placeholder="Your Name" required>
@@ -164,24 +156,17 @@
                 </div>
             </div>
         </section>
-        <!-- Review Section -->
-        <section class="review-section">
-            <div class="container">
-                <h2>Loved Our Work? Leave a Review!</h2>
-                <p>Your feedback helps us continue to provide the best service possible and allows other homeowners to learn about our commitment to quality. We'd be grateful if you shared your experience.</p>
-                <a href="https://www.bbb.org/us/fl/groveland/profile/tile-installation/aesthetic-tile-llc-0733-235972343" target="_blank" class="btn-primary">Leave a Review</a>
-            </div>
-        </section>
+        
         <!-- Map Section -->
-        <section class="map-section">
+        <section class="map-section" style="padding: 5rem 0; background: var(--bg-light);">
             <div class="container">
                 <div class="section-header">
                     <h2>Find Us in Groveland</h2>
                     <p>Serving Groveland, Clermont, Minneola, Winter Garden, Orlando & nearby communities</p>
                 </div>
-                <div class="map-container">
+                <div class="map-container" style="border-radius: 0.75rem; overflow: hidden; box-shadow: var(--shadow-lg);">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.323952458428!2d-81.8412!3d28.5683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e788c1b3ac3e5d%3A0x6e7b5e4f2a71343c!2s1195%20Greenley%20Ave%2C%20Groveland%2C%20FL%2034736%2C%20USA!5e0!3m2!1sen!2sus!4v1662586733364!5m2!1sen!2sus"
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        style="border:0; width: 100%; height: 450px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -252,52 +237,29 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Aesthetic Tile",
-        "description": "Professional tile installation for kitchens, bathrooms, and flooring in Groveland, FL. Expert craftsmanship for backsplashes, showers, and specialty projects.",
-        "url": "https://aesthetic-tile-website.vercel.app",
-        "telephone": "+1-502-650-7014",
-        "email": "office@aesthetictile.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "1195 Greenley Ave",
-            "addressLocality": "Groveland",
-            "addressRegion": "FL",
-            "postalCode": "34736",
-            "addressCountry": "US"
+        "@type": "ContactPage",
+        "name": "Contact Aesthetic Tile",
+        "description": "Contact Aesthetic Tile for a free estimate on your tile installation project. Serving Groveland, Clermont, and Central Florida.",
+        "url": "https://aesthetic-tile-website.vercel.app/contact.html",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aesthetic-tile-website.vercel.app/contact.html"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "28.5683",
-            "longitude": "-81.8412"
-        },
-        "areaServed": [
-            "Groveland, FL",
-            "Clermont, FL",
-            "Minneola, FL",
-            "Winter Garden, FL",
-            "Orlando, FL"
-        ],
-        "serviceType": [
-            "Bathroom tile installation",
-            "Kitchen backsplash installation",
-            "Floor tile installation",
-            "Tile repair",
-            "Demolition and surface prep"
-        ],
-        "foundingDate": "2010",
-        "founder": {
-            "@type": "Person",
-            "name": "Brad"
-        },
-        "sameAs": [
-            "https://www.facebook.com/AestheticTileCo",
-            "https://x.com/AestheticTileCo",
-            "https://www.youtube.com/@AestheticTile",
-            "https://www.instagram.com/aesthetictile/"
-        ]
+        "publisher": {
+            "@type": "LocalBusiness",
+            "name": "Aesthetic Tile",
+            "telephone": "+1-502-650-7014",
+            "email": "office@aesthetictile.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1195 Greenley Ave",
+                "addressLocality": "Groveland",
+                "addressRegion": "FL",
+                "postalCode": "34736",
+                "addressCountry": "US"
+            }
+        }
     }
     </script>
 </body>
 </html>
-
