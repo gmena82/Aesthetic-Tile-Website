@@ -39,30 +39,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile menu functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
+    const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
     
-    if (mobileMenuBtn && navMenu) {
+    if (mobileMenuBtn && mobileNavOverlay) {
         mobileMenuBtn.addEventListener('click', function() {
             mobileMenuBtn.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
-                mobileMenuBtn.classList.remove('active');
-                navMenu.classList.remove('active');
+            mobileNavOverlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileNavOverlay.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
             }
         });
 
-        // Close mobile menu when clicking on a link
-        navMenu.querySelectorAll('a').forEach(link => {
+        // Close mobile menu when clicking outside
+        mobileNavOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileNavOverlay) {
+                mobileMenuBtn.classList.remove('active');
+                mobileNavOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close mobile menu when clicking on a link (except dropdown toggles)
+        const mobileNavLinks = mobileNavOverlay.querySelectorAll('a:not(.mobile-dropdown-toggle)');
+        mobileNavLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenuBtn.classList.remove('active');
-                navMenu.classList.remove('active');
+                mobileNavOverlay.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
     }
+    
+    // Mobile dropdown functionality
+    mobileDropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.mobile-dropdown-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            });
+        }
+    });
 
     // Service card interactions
     const serviceCards = document.querySelectorAll('.service-card');
