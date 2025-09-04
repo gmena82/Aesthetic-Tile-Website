@@ -395,5 +395,30 @@
             </div>
         </div>
     </footer>
+	   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+            const dropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+
+            // Toggle the main mobile menu
+            if (mobileMenuBtn && mobileNavOverlay) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenuBtn.classList.toggle('active');
+                    mobileNavOverlay.classList.toggle('active');
+                });
+            }
+
+            // Toggle the "Services" dropdown inside the mobile menu
+            if (dropdownToggle) {
+                dropdownToggle.addEventListener('click', function(event) {
+                    // Prevent the link from navigating away
+                    event.preventDefault(); 
+                    const dropdown = this.parentElement; // this is the <li> with class .mobile-dropdown
+                    dropdown.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
