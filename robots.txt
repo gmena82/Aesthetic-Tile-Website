@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the entire site
+# Disallow crawling of any admin or private directories (none currently)
+
+# Sitemap location
+Sitemap: https://aesthetic-tile-website.vercel.app/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
