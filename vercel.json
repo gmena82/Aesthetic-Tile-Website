@@ -4,7 +4,7 @@
     {
       "source": "https://aesthetic-tile-website.vercel.app/:path*",
       "destination": "https://www.aesthetictile-florida.com/:path*",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
