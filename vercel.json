@@ -2,8 +2,14 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "https://aesthetic-tile-website.vercel.app/:path*",
-      "destination": "https://www.aesthetictile-florida.com/:path*",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "aesthetic-tile-website.vercel.app"
+        }
+      ],
+      "destination": "https://www.aesthetictile-florida.com/$1",
       "statusCode": 301
     }
   ]
