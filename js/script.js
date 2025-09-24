@@ -40,18 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
-    
-    if (mobileMenuBtn && navMenu) {
+    const navRight = document.querySelector('.nav-right');
+
+    if (mobileMenuBtn && navMenu && navRight) {
         mobileMenuBtn.addEventListener('click', function() {
             mobileMenuBtn.classList.toggle('active');
             navMenu.classList.toggle('active');
+            navRight.classList.toggle('active');
         });
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
-            if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+            if (!mobileMenuBtn.contains(e.target) && !navRight.contains(e.target)) {
                 mobileMenuBtn.classList.remove('active');
                 navMenu.classList.remove('active');
+                navRight.classList.remove('active');
             }
         });
 
@@ -60,8 +63,18 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 mobileMenuBtn.classList.remove('active');
                 navMenu.classList.remove('active');
+                navRight.classList.remove('active');
             });
         });
+
+        const navCta = navRight.querySelector('.cta-button');
+        if (navCta) {
+            navCta.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+                navRight.classList.remove('active');
+            });
+        }
     }
 
     // Service card interactions
