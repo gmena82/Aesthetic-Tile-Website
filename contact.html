@@ -127,18 +127,18 @@
                         </div>
                     </div>
                     <div class="cta-form">
-                        <form class="contact-form">
+                        <form action="https://formspree.io/f/mzzjzbpk" method="POST" class="contact-form">
                             <div class="form-group">
-                                <input type="text" placeholder="Your Name" required>
+                                <input type="text" name="name" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email Address" required>
+                                <input type="email" name="email" placeholder="Email Address" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" placeholder="Phone Number" required>
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
                             </div>
                             <div class="form-group">
-                                <select required>
+                                <select name="service" required>
                                     <option value="">Select Service</option>
                                     <option value="kitchen-backsplash">Kitchen Backsplash</option>
                                     <option value="bathroom-shower">Bathroom & Shower</option>
@@ -148,7 +148,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <textarea placeholder="Tell us about your project..." rows="5"></textarea>
+                                <textarea name="message" placeholder="Tell us about your project..." rows="5"></textarea>
                             </div>
                             <button type="submit" class="btn-primary full-width">Submit Inquiry</button>
                         </form>
