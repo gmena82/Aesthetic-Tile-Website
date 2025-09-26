@@ -292,13 +292,30 @@
         const successMessage = form.querySelector('[data-message="success"]');
         const errorMessage = form.querySelector('[data-message="error"]');
         const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton ? submitButton.textContent.trim() : '';
+
+        const toggleMessage = (element, isVisible) => {
+            if (!element) return;
+            element.classList.toggle('is-visible', Boolean(isVisible));
+        };
+
+        const setLoadingState = (isLoading) => {
+            if (!submitButton) return;
+            submitButton.disabled = isLoading;
+            submitButton.classList.toggle('is-loading', isLoading);
+            if (isLoading) {
+                submitButton.textContent = 'Sending…';
+            } else {
+                submitButton.textContent = originalButtonText;
+            }
+        };
 
         form.addEventListener('submit', async function (event) {
             event.preventDefault();
 
-            if (successMessage) successMessage.style.display = 'none';
-            if (errorMessage) errorMessage.style.display = 'none';
-            if (submitButton) submitButton.disabled = true;
+            toggleMessage(successMessage, false);
+            toggleMessage(errorMessage, false);
+            setLoadingState(true);
 
             try {
                 const response = await fetch(form.action, {
@@ -309,14 +326,14 @@
 
                 if (response.ok) {
                     form.reset();
-                    if (successMessage) successMessage.style.display = 'block';
-                } else if (errorMessage) {
-                    errorMessage.style.display = 'block';
+                    toggleMessage(successMessage, true);
+                } else {
+                    toggleMessage(errorMessage, true);
                 }
             } catch (error) {
-                if (errorMessage) errorMessage.style.display = 'block';
+                toggleMessage(errorMessage, true);
             } finally {
-                if (submitButton) submitButton.disabled = false;
+                setLoadingState(false);
             }
         });
     });
