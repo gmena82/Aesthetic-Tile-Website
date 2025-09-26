@@ -1659,9 +1659,13 @@ body {
     margin-bottom: 4rem;
 }
 
+.about-page .about-content {
+    padding-top: 3rem;
+}
+
 .about-intro h1 {
     font-size: 2.5rem;
-    color: var(--text-primary);
+    color: var(--accent-color);
     margin-bottom: 1rem;
     font-weight: 700;
 }
