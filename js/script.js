@@ -90,57 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const phone = this.querySelector('input[type="tel"]').value;
-            const service = this.querySelector('select').value;
-            const details = this.querySelector('textarea').value;
-            
-            // Basic validation
-            if (!name || !email || !phone) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Phone validation
-            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-            const cleanPhone = phone.replace(/\D/g, '');
-            if (cleanPhone.length < 10) {
-                alert('Please enter a valid phone number.');
-                return;
-            }
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                alert('Thank you for your request! We will contact you within 24 hours to schedule your free estimate.');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-    }
-
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
