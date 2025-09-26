@@ -91,21 +91,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Contact form handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+    const contactForms = document.querySelectorAll('.contact-form');
+    contactForms.forEach(form => {
+        // Enhanced forms (like the Formspree integration on the contact page)
+        // handle their own submission logic inline, so skip the legacy handler.
+        if (form.classList.contains('contact-form--enhanced')) {
+            return;
+        }
+
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form data
-            const formData = new FormData(this);
             const name = this.querySelector('input[type="text"]').value;
             const email = this.querySelector('input[type="email"]').value;
-            const phone = this.querySelector('input[type="tel"]').value;
-            const service = this.querySelector('select').value;
-            const details = this.querySelector('textarea').value;
-            
+            const phoneInput = this.querySelector('input[type="tel"]');
+            const serviceSelect = this.querySelector('select');
+            const details = this.querySelector('textarea');
+
+            const phone = phoneInput ? phoneInput.value : '';
+            const service = serviceSelect ? serviceSelect.value : '';
+            const message = details ? details.value : '';
+
             // Basic validation
-            if (!name || !email || !phone) {
+            if (!name || !email || (phoneInput && !phone) || (serviceSelect && !service) || (details && !message)) {
                 alert('Please fill in all required fields.');
                 return;
             }
@@ -118,19 +127,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Phone validation
-            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-            const cleanPhone = phone.replace(/\D/g, '');
-            if (cleanPhone.length < 10) {
-                alert('Please enter a valid phone number.');
-                return;
+            if (phone) {
+                const cleanPhone = phone.replace(/\D/g, '');
+                if (cleanPhone.length < 10) {
+                    alert('Please enter a valid phone number.');
+                    return;
+                }
             }
-            
+
             // Simulate form submission
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            
+
             // Simulate API call
             setTimeout(() => {
                 alert('Thank you for your request! We will contact you within 24 hours to schedule your free estimate.');
@@ -139,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = false;
             }, 2000);
         });
-    }
+    });
 
     // Intersection Observer for animations
     const observerOptions = {
