@@ -3,13 +3,23 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "aesthetic-tile-website.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "aesthetic-tile-website.vercel.app"
+        }
+      ],
       "destination": "https://www.aesthetictile-florida.com/$1",
       "permanent": true
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "aesthetictile-florida.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "aesthetictile-florida.com"
+        }
+      ],
       "destination": "https://www.aesthetictile-florida.com/$1",
       "permanent": true
     }
