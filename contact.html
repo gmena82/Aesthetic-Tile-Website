@@ -32,9 +32,9 @@
     <link rel="canonical" href="https://www.aesthetictile-florida.com/contact">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="contact-page">
     <!-- Header -->
     <header class="header">
         <!-- Top bar -->
@@ -151,42 +151,26 @@
                     </div>
                     <div class="cta-form">
                         <form
-                            id="contact-form"
                             action="https://formspree.io/f/mzzjzbpk"
+                            class="fs-form"
+                            target="_top"
                             method="POST"
-                            class="contact-form contact-form--enhanced"
                         >
-                            <div class="contact-form__field">
-                                <label class="contact-form__label" for="contact-name">Name</label>
-                                <input class="contact-form__input" id="contact-name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required>
+                            <div class="fs-field">
+                                <label class="fs-label" for="name">Name</label>
+                                <input class="fs-input" id="name" name="name" />
                             </div>
-
-                            <div class="contact-form__field">
-                                <label class="contact-form__label" for="contact-email">Email</label>
-                                <input class="contact-form__input" id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                            <div class="fs-field">
+                                <label class="fs-label" for="email">Email</label>
+                                <input class="fs-input" id="email" name="email" required />
                             </div>
-
-                            <div class="contact-form__field contact-form__field--full">
-                                <label class="contact-form__label" for="contact-message">Message</label>
-                                <textarea class="contact-form__textarea" id="contact-message" name="message" placeholder="Tell us about your project..." rows="5"></textarea>
-                                <p class="contact-form__description">We usually respond within 1–2 business days.</p>
+                            <div class="fs-field">
+                                <label class="fs-label" for="message">Message</label>
+                                <textarea class="fs-textarea" id="message" name="message"></textarea>
+                                <p class="fs-description">We usually respond within 1-2 business days.</p>
                             </div>
-
-                            <div class="contact-form__field">
-                                <label class="contact-form__label" for="contact-phone">Phone <span class="contact-form__optional">(optional)</span></label>
-                                <input class="contact-form__input" id="contact-phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel">
-                            </div>
-
-                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="contact-form__honeypot" aria-hidden="true">
-                            <input type="hidden" name="_subject" value="Aesthetic Tile — New Contact Form Submission">
-
-                            <div class="contact-form__status contact-form__field--full" aria-live="polite">
-                                <p class="contact-form__message contact-form__message--success" data-message="success">Thanks! Your message has been sent.</p>
-                                <p class="contact-form__message contact-form__message--error" data-message="error">Sorry—something went wrong. Please try again or email us directly.</p>
-                            </div>
-
-                            <div class="contact-form__actions contact-form__field--full">
-                                <button class="btn-primary" type="submit">Send Message</button>
+                            <div class="fs-button-group">
+                                <button class="fs-button" type="submit">Send</button>
                             </div>
                         </form>
                     </div>
@@ -284,63 +268,6 @@
             </div>
         </div>
     </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('contact-form');
-        if (!form) return;
-
-        const submitButton = form.querySelector('button[type="submit"]');
-        const successMessage = form.querySelector('[data-message="success"]');
-        const errorMessage = form.querySelector('[data-message="error"]');
-        const messages = [successMessage, errorMessage];
-        const originalButtonText = submitButton ? submitButton.textContent.trim() : '';
-
-        const setLoadingState = (isLoading) => {
-            if (!submitButton) return;
-            submitButton.disabled = isLoading;
-            submitButton.classList.toggle('is-loading', isLoading);
-            submitButton.setAttribute('aria-busy', String(isLoading));
-            submitButton.textContent = isLoading ? 'Sending…' : originalButtonText;
-        };
-
-        const toggleMessage = (type = null) => {
-            messages.forEach((message) => {
-                if (!message) return;
-                const shouldShow = Boolean(type && message.dataset.message === type);
-                message.classList.toggle('is-visible', shouldShow);
-                message.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
-            });
-        };
-
-        toggleMessage();
-
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-
-            toggleMessage();
-            setLoadingState(true);
-
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { Accept: 'application/json' }
-                });
-
-                if (response.ok) {
-                    form.reset();
-                    toggleMessage('success');
-                } else {
-                    toggleMessage('error');
-                }
-            } catch (error) {
-                toggleMessage('error');
-            } finally {
-                setLoadingState(false);
-            }
-        });
-    });
-    </script>
     <script src="js/script.js"></script>
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
