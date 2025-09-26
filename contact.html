@@ -285,20 +285,40 @@
         </div>
     </footer>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('contact-form');
         if (!form) return;
 
+        const submitButton = form.querySelector('button[type="submit"]');
         const successMessage = form.querySelector('[data-message="success"]');
         const errorMessage = form.querySelector('[data-message="error"]');
-        const submitButton = form.querySelector('button[type="submit"]');
+        const messages = [successMessage, errorMessage];
+        const originalButtonText = submitButton ? submitButton.textContent.trim() : '';
 
-        form.addEventListener('submit', async function (event) {
+        const setLoadingState = (isLoading) => {
+            if (!submitButton) return;
+            submitButton.disabled = isLoading;
+            submitButton.classList.toggle('is-loading', isLoading);
+            submitButton.setAttribute('aria-busy', String(isLoading));
+            submitButton.textContent = isLoading ? 'Sending…' : originalButtonText;
+        };
+
+        const toggleMessage = (type = null) => {
+            messages.forEach((message) => {
+                if (!message) return;
+                const shouldShow = Boolean(type && message.dataset.message === type);
+                message.classList.toggle('is-visible', shouldShow);
+                message.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+            });
+        };
+
+        toggleMessage();
+
+        form.addEventListener('submit', async (event) => {
             event.preventDefault();
 
-            if (successMessage) successMessage.style.display = 'none';
-            if (errorMessage) errorMessage.style.display = 'none';
-            if (submitButton) submitButton.disabled = true;
+            toggleMessage();
+            setLoadingState(true);
 
             try {
                 const response = await fetch(form.action, {
@@ -309,14 +329,14 @@
 
                 if (response.ok) {
                     form.reset();
-                    if (successMessage) successMessage.style.display = 'block';
-                } else if (errorMessage) {
-                    errorMessage.style.display = 'block';
+                    toggleMessage('success');
+                } else {
+                    toggleMessage('error');
                 }
             } catch (error) {
-                if (errorMessage) errorMessage.style.display = 'block';
+                toggleMessage('error');
             } finally {
-                if (submitButton) submitButton.disabled = false;
+                setLoadingState(false);
             }
         });
     });

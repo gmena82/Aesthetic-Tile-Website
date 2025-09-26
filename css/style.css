@@ -744,12 +744,23 @@ body.nav-open {
 }
 
 .contact-form--enhanced .contact-form__status {
-    min-height: 1.25rem;
+    min-height: 1.5rem;
 }
 
 .contact-form--enhanced .contact-form__message {
     font-size: 0.9rem;
-    display: none;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.25rem);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form--enhanced .contact-form__message.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .contact-form--enhanced .contact-form__message--success {
@@ -758,6 +769,11 @@ body.nav-open {
 
 .contact-form--enhanced .contact-form__message--error {
     color: #b42318;
+}
+
+.contact-form--enhanced .btn-primary.is-loading {
+    opacity: 0.85;
+    pointer-events: none;
 }
 
 .contact-form__honeypot {
