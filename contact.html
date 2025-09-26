@@ -180,8 +180,8 @@
                             <input type="hidden" name="_subject" value="Aesthetic Tile — New Contact Form Submission">
 
                             <div class="contact-form__status contact-form__field--full" aria-live="polite">
-                                <p class="contact-form__message contact-form__message--success" data-message="success">Thanks! Your message has been sent.</p>
-                                <p class="contact-form__message contact-form__message--error" data-message="error">Sorry—something went wrong. Please try again or email us directly.</p>
+                                <p class="contact-form__message contact-form__message--success" data-message="success" aria-hidden="true">Thanks! Your message has been sent.</p>
+                                <p class="contact-form__message contact-form__message--error" data-message="error" aria-hidden="true">Sorry—something went wrong. Please try again or email us directly.</p>
                             </div>
 
                             <div class="contact-form__actions contact-form__field--full">
@@ -295,8 +295,13 @@
 
         const toggleMessage = (element, isVisible) => {
             if (!element) return;
-            element.classList.toggle('is-visible', Boolean(isVisible));
+            const shouldShow = Boolean(isVisible);
+            element.classList.toggle('is-visible', shouldShow);
+            element.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
         };
+
+        toggleMessage(successMessage, false);
+        toggleMessage(errorMessage, false);
 
         const setLoadingState = (isLoading) => {
             if (!submitButton) return;
