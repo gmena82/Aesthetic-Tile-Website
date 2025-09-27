@@ -2315,6 +2315,14 @@ body.nav-open {
     drop-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
+/* Homepage SEO sections */
+.section.installation-standards, .section.materials-expertise {
+    margin-top: 2rem;
+}
+.section.materials-expertise {
+    margin-bottom: 2rem;
+}
+
 @media (max-width: 768px) {
     .cta-section {
         padding: 60px 0;
