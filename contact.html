@@ -127,8 +127,13 @@
           </div>
 
           <div class="cta-form">
-            <!-- MERGE-CONFLICT-FREE FORM, ENDPOINT WIRED, LEAD-TIME REMOVED -->
-            <form action="https://formspree.io/f/mzzjzbpk" class="fs-form" method="POST" target="_top">
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mzzjzbpk"
+              class="fs-form"
+              method="POST"
+              target="_top"
+            >
               <div class="fs-field">
                 <label class="fs-label" for="name">Name</label>
                 <input class="fs-input" id="name" name="name" type="text" autocomplete="name" required />
@@ -140,12 +145,18 @@
               <div class="fs-field">
                 <label class="fs-label" for="message">Message</label>
                 <textarea class="fs-textarea" id="message" name="message" placeholder="How can we help?"></textarea>
-                <!-- removed lead-time line on purpose -->
+                <!-- intentionally no lead‑time line -->
               </div>
 
               <!-- Spam honeypot + optional subject -->
               <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true" />
               <input type="hidden" name="_subject" value="Aesthetic Tile — New Contact Form Submission" />
+
+              <!-- Inline status messages -->
+              <div class="col-span-full" aria-live="polite">
+                <p class="fs-message fs-success" id="form-success" style="display:none;">Thanks! Your message has been sent.</p>
+                <p class="fs-message fs-error" id="form-error" style="display:none;">Sorry—something went wrong. Please try again or email us directly.</p>
+              </div>
 
               <div class="fs-button-group">
                 <button class="fs-button" type="submit">Send</button>
@@ -276,6 +287,45 @@
       }
     }
   }
+  </script>
+
+  <script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    const successEl = document.getElementById('form-success');
+    const errorEl = document.getElementById('form-error');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // prevent redirect to Formspree thank‑you page
+
+      if (successEl) successEl.style.display = 'none';
+      if (errorEl) errorEl.style.display = 'none';
+
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          if (successEl) successEl.style.display = 'block';
+        } else {
+          if (errorEl) errorEl.style.display = 'block';
+        }
+      } catch (err) {
+        if (errorEl) errorEl.style.display = 'block';
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    });
+  })();
   </script>
 </body>
 </html>
