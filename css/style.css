@@ -2463,3 +2463,38 @@ body.nav-open {
 }
 
 /* Trigger deployment */
+
+/* ABOUT PAGE TWEAKS */
+.about-section {
+    margin-top: 2rem;
+}
+
+.about-chapter p + p {
+    margin-top: 1.25rem;
+}
+
+.about-difference ul {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+}
+
+.about-difference ul li {
+    margin-bottom: 0.75rem;
+}
+
+.about-difference + .about-what-we-do {
+    margin-top: 2.5rem;
+}
+
+.about-secondary-image {
+    margin: 2rem 0 2.25rem;
+}
+
+.about-secondary-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-lg);
+}
