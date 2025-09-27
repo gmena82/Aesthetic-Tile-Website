@@ -336,30 +336,41 @@
                         </div>
                     </div>
                     <div class="cta-form">
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" placeholder="Your Name" required>
+                        <form
+                            class="fs-form"
+                            method="POST"
+                            action="https://formspree.io/f/mzzjzbpk"
+                            target="_top"
+                            data-inline-success
+                        >
+                            <div class="fs-field">
+                                <label class="fs-label" for="cta-name">Name</label>
+                                <input class="fs-input" id="cta-name" name="name" type="text" autocomplete="name" required />
                             </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Email Address" required>
+
+                            <div class="fs-field">
+                                <label class="fs-label" for="cta-email">Email</label>
+                                <input class="fs-input" id="cta-email" name="email" type="email" autocomplete="email" required />
                             </div>
-                            <div class="form-group">
-                                <input type="tel" placeholder="Phone Number" required>
+
+                            <div class="fs-field">
+                                <label class="fs-label" for="cta-message">Message</label>
+                                <textarea class="fs-textarea" id="cta-message" name="message" placeholder="Tell us about your project…"></textarea>
                             </div>
-                            <div class="form-group">
-                                <select required>
-                                    <option value="">Select Service</option>
-                                    <option value="kitchen-backsplash">Kitchen Backsplash</option>
-                                    <option value="bathroom-shower">Bathroom & Shower</option>
-                                    <option value="floor-tile">Floor Tile Installation</option>
-                                    <option value="fireplace">Fireplace</option>
-                                    <option value="special-project">Special Project</option>
-                                </select>
+
+                            <!-- Honeypot + subject (optional but recommended) -->
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true" />
+                            <input type="hidden" name="_subject" value="Aesthetic Tile — New CTA Form Submission" />
+
+                            <!-- Inline status messages (scoped to this form) -->
+                            <div class="col-span-full" aria-live="polite">
+                                <p class="fs-message fs-success" style="display:none;">Thanks! Your message has been sent.</p>
+                                <p class="fs-message fs-error" style="display:none;">Sorry—something went wrong. Please try again or email us directly.</p>
                             </div>
-                            <div class="form-group">
-                                <textarea placeholder="Project Details" rows="4"></textarea>
+
+                            <div class="fs-button-group">
+                                <button class="fs-button" type="submit">Send</button>
                             </div>
-                            <button type="submit" class="btn-primary full-width">Get Free Estimate</button>
                         </form>
                     </div>
                 </div>
@@ -442,6 +453,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/formspree-inline.js" defer></script>
 </body>
 </html>
