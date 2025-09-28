@@ -584,17 +584,41 @@ body.nav-open {
     margin-bottom: 2rem;
 }
 
-.home-testimonials blockquote {
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: var(--text-secondary);
-    font-style: italic;
+.home-testimonials .testimonials-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.home-testimonials blockquote:last-of-type {
-    margin-bottom: 0;
+.home-testimonials .testimonial-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    padding: 1.25rem;
+}
+
+.home-testimonials .stars {
+    font-size: 1rem;
+    letter-spacing: .1em;
+    color: #f59e0b;
+    margin-bottom: .5rem;
+}
+
+.home-testimonials .quote {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin: .25rem 0 .5rem;
+}
+
+.home-testimonials .author {
+    font-size: .9rem;
+    color: var(--text-secondary);
+}
+
+.trust-note {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: .5rem;
 }
 
 /* CTA Section */
