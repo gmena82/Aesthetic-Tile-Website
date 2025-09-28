@@ -2545,6 +2545,12 @@ body.nav-open {
 .section.bath-process,
 .section.bath-testimonial { margin-top: 2rem; }
 
+/* Floor Tile Installation page structure */
+.section.ft-prep,
+.section.ft-why,
+.section.ft-styles,
+.section.ft-process { margin-top: 2rem; }
+
 main p + p,
 main p + ul,
 main p + ol,
@@ -2553,7 +2559,10 @@ main ol + p,
 main ul + ul,
 main ol + ol,
 main ul + ol,
-main ol + ul {
+main ol + ul,
+main p + h2,
+main ul + h2,
+main ol + h2 {
     margin-top: 1.75rem;
 }
 
