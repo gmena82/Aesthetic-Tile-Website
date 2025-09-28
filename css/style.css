@@ -2545,6 +2545,12 @@ body.nav-open {
 .section.bath-process,
 .section.bath-testimonial { margin-top: 2rem; }
 
+/* Fireplace page structure */
+.section.fp-safety,
+.section.fp-focal,
+.section.fp-materials,
+.section.fp-custom { margin-top: 2rem; }
+
 /* Floor Tile Installation page structure */
 .section.ft-prep,
 .section.ft-why,
