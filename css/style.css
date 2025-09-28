@@ -2546,5 +2546,24 @@ body.nav-open {
 .section.bath-testimonial { margin-top: 2rem; }
 
 .inline-cta { margin: 1rem 0; text-align: center; }
-.bath-features ul { margin: .5rem 0 0; padding-left: 1.25rem; }
+
+.bath-waterproofing ul,
+.bath-features ul,
+.bath-process ol {
+    margin: 1rem 0 0;
+    padding-left: 1.5rem;
+}
+
+.bath-waterproofing ul li,
+.bath-features ul li,
+.bath-process ol li {
+    margin-bottom: 0.75rem;
+}
+
+.bath-waterproofing ul li:last-child,
+.bath-features ul li:last-child,
+.bath-process ol li:last-child {
+    margin-bottom: 0;
+}
+
 .bath-testimonial blockquote { font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
