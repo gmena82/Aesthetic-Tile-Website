@@ -52,6 +52,39 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .kb-testimonial {
+            background: var(--bg-light);
+            padding: 4rem 0;
+        }
+
+        .kb-testimonial .container {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .kb-testimonial .testimonial-card {
+            background: #fff;
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-md);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .kb-testimonial .quote {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .kb-testimonial .author {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -167,10 +200,10 @@
                     <p>Durable, budget-friendly, and easy to maintain—great for busy kitchens. Wide color and size options, including classic 3×6 subway tile.</p>
 
                     <h3>Natural Stone (Marble, Travertine)</h3>
-                    <p>Premium look with unique variation. Requires sealing and thoughtful <strong>grout selection</strong> for stain resistance and long-term performance.</p>
+                    <p>Premium look with unique variation. Requires sealing and thoughtful grout selection for stain resistance and long-term performance.</p>
 
                     <h3>Glass &amp; Mosaics</h3>
-                    <p>High visual impact and light play. Excellent for feature walls and accent bands; pairs well with <strong>under cabinet lighting</strong>.</p>
+                    <p>High visual impact and light play. Excellent for feature walls and accent bands; pairs well with under cabinet lighting.</p>
 
                     <h3>Large-Format &amp; Specialty</h3>
                     <p>Fewer grout joints and a modern aesthetic. Demands precise layout and surface prep for flat, seamless results.</p>
@@ -189,13 +222,18 @@
 
                 <section class="section kb-process">
                     <h2>Our Kitchen Backsplash Installation Process</h2>
-                    <p>Backsplashes require precision. We plan layouts to avoid awkward cuts, protect countertops and cabinetry, and cut accurately around outlets and corners. We handle exposed edges with profiles (e.g., Schluter®) or bullnose finishes for a clean, professional look. We specify high-quality mortars and <strong>stain-resistant grout</strong>, then seal stone as needed.</p>
-                    <p>For <strong>kitchen remodeling</strong> projects, we coordinate with your schedule, other trades, and appliance timelines to keep everything on track.</p>
+                    <p>Backsplashes require precision. We plan layouts to avoid awkward cuts, protect countertops and cabinetry, and cut accurately around outlets and corners. We handle exposed edges with profiles (e.g., Schluter®) or bullnose finishes for a clean, professional look. We specify high-quality mortars and stain-resistant grout, then seal stone as needed.</p>
+                    <p>For kitchen remodeling projects, we coordinate with your schedule, other trades, and appliance timelines to keep everything on track.</p>
                 </section>
             </div>
         </section>
         <section class="section kb-testimonial">
-            <blockquote>“Aesthetic Tile handled our complex mosaic backsplash perfectly. Best kitchen installers in Clermont!” — Melissa R., Clermont, FL</blockquote>
+            <div class="container">
+                <article class="testimonial-card">
+                    <p class="quote">“Aesthetic Tile handled our complex mosaic backsplash perfectly. Best kitchen installers in Clermont!”</p>
+                    <p class="author">— Melissa R., Clermont, FL</p>
+                </article>
+            </div>
         </section>
         <!-- FAQ Section -->
         <section class="faq-section">
