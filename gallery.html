@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Gallery | Aesthetic Tile | Groveland, FL</title>
-    <meta name="description" content="View the project gallery of Aesthetic Tile. See examples of our expert craftsmanship in kitchen backsplashes, bathroom showers, and floor tile installations in Central Florida.">
+    <title>Tile Installation Project Gallery: Kitchens, Baths & Floors | Groveland, FL | Aesthetic Tile</title>
+    <meta name="description" content="Browse Aesthetic Tile's gallery of completed projects across Groveland, Clermont, and Orlando. Find inspiration for your kitchen backsplash, bathroom remodel, or custom flooring installation.">
     <!-- Favicon and app icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/img/favicon-16x16.png">
@@ -33,21 +33,18 @@
     <link rel="canonical" href="https://www.aesthetictile-florida.com/gallery">
     <style>
         /* Styles for Gallery Page - Add to style.css */
-        .gallery-intro {
-            text-align: center;
-            padding: 4rem 1rem;
-            max-width: 800px;
-            margin: 0 auto;
+        .section.gallery-intro {
+            padding: 3rem 1rem;
+            margin-bottom: 1.5rem;
         }
-        .gallery-intro h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
+        .section.gallery-intro .container {
+            max-width: 860px;
         }
-        .gallery-intro p {
-            font-size: 1.1rem;
+        .section.gallery-intro p {
+            font-size: 1.05rem;
             line-height: 1.7;
             color: var(--text-secondary);
+            margin-bottom: 1rem;
         }
         .gallery-section {
             padding: 0 1rem 5rem 1rem;
@@ -58,18 +55,21 @@
             gap: 1.5rem;
         }
         .gallery-item {
-            position: relative;
+            margin: 0;
             cursor: pointer;
+        }
+        .gallery-media {
+            position: relative;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: var(--shadow-md);
         }
-        .gallery-item img {
+        .gallery-media img {
             width: 100%;
             display: block;
             transition: transform 0.3s ease;
         }
-        .gallery-item:hover img {
+        .gallery-item:hover .gallery-media img {
             transform: scale(1.05);
         }
         .gallery-overlay {
@@ -92,6 +92,16 @@
         }
         .magnify-icon {
             font-weight: 200;
+        }
+        .gallery-caption {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        .gallery-cta {
+            margin: 1.5rem 0;
+            text-align: center;
         }
 
         /* Lightbox Modal Styles */
@@ -232,82 +242,122 @@
             </div>
             <div class="container">
                 <div class="hero-content">
-                    <h1>Our Project Gallery</h1>
+                    <h1>Our Work: Central Florida Tile Installation Showcase</h1>
                     <p>See the quality and craftsmanship in every tile we lay.</p>
                 </div>
             </div>
         </section>
         <!-- Intro Text Section -->
-        <section class="gallery-intro">
+        <section class="section gallery-intro">
             <div class="container">
-                <h2>A Showcase of Our Finest Work</h2>
-                <p>Browse through a collection of our recent projects. From stunning kitchen backsplashes to luxurious bathroom renovations and durable, elegant floors, each project reflects our commitment to precision, quality, and timeless design. We hope this gallery inspires your next home transformation.</p>
+                <p>Welcome to the Aesthetic Tile project gallery. Below you’ll find a selection of recent installations completed across Groveland, Clermont, Winter Garden, Minneola, and the greater Orlando area. We showcase a variety of projects—from kitchen backsplashes and bathroom remodels to large-format flooring and custom fireplace surrounds—so you can see the craftsmanship and attention to detail that define our work.</p>
+                <p>Every project is built for longevity. We prioritize clean layouts, tight grout lines, flat surfaces, and proper waterproofing to perform in Florida’s climate. As you browse, look for the materials and patterns that inspire you—ceramic, porcelain, natural stone, glass, mosaics, and more. When something catches your eye, let’s discuss how we can bring that same level of quality to your home.</p>
+                <div class="gallery-cta">
+                    <a class="cta-button" href="/contact">See something you love? Request a Quote</a>
+                </div>
             </div>
         </section>
         <!-- Gallery Grid Section -->
         <section class="gallery-section">
             <div class="container">
                 <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/gallery/bathroom-floor-tile-checkered.webp" alt="Bathroom with beautiful checkered stone tile">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/bathroom-remodel-stone-tile.webp" alt="Bathroom with different pattern stone tile">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/bathroom-remodel-tan-tile.webp" alt="Bathroom with new tile and a brown color scheme">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/bathroom-remodel-tile.webp" alt="Bathroom remodel with marble tiling">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/bathroom-tile-floor-mosaic.webp" alt="Show piece bathroom floor tiling in a mosaic">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/fireplace-project-square-tile.webp" alt="Fireplace with stone tiling">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/fireplace-project.webp" alt="Fireplace with stone stacking tile">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/fireplace-stone.webp" alt="Beautiful stone tile fireplace">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/fireplace-tile-stone.webp" alt="Herringbone style stone fireplace">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/kitchen-backsplash-black-tile.webp" alt="Modern industrial black kitchen backsplash">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/kitchen-backsplash-star-wars.webp" alt="Modern futuristic Star Wars themed kitchen backsplash">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/kitchen-backsplash-stone-lock.webp" alt="Stone lock style kitchen backsplash">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/kitchen-backsplash-stone-wedge.webp" alt="kitchen backsplash with stone stack style">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/kitchen-backsplash-tile.webp" alt="Square tile white kitchen backsplash">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery/patio-tile-black.webp" alt="Black slate tile patio">
-                        <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
-                    </div>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/bathroom-floor-tile-checkered.webp" alt="Black and white marble checkered bathroom floor tile installation in Groveland, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                        <figcaption class="gallery-caption">Classic checkered marble bathroom floor — Groveland, FL.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/bathroom-remodel-stone-tile.webp" alt="Gray porcelain large-format bathroom shower tile renovation in Clermont, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/bathroom-remodel-tan-tile.webp" alt="Tan stone-look porcelain bathroom remodel installation in Winter Garden, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/bathroom-remodel-tile.webp" alt="Polished marble shower wall tile renovation in Minneola, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/bathroom-tile-floor-mosaic.webp" alt="Colorful mosaic ceramic bathroom floor tile installation in Orlando, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                        <figcaption class="gallery-caption">Mosaic bathroom floor refresh — Orlando, FL.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/fireplace-project-square-tile.webp" alt="Textured ceramic square tile fireplace surround installation in Groveland, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                        <figcaption class="gallery-caption">Square ceramic fireplace surround — Groveland, FL.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/fireplace-project.webp" alt="Stacked stone veneer fireplace refacing installation in Clermont, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/fireplace-stone.webp" alt="Natural stone ledgestone fireplace surround installation in Winter Garden, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/fireplace-tile-stone.webp" alt="Chevron marble tile fireplace feature installation in Minneola, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                        <figcaption class="gallery-caption">Chevron marble fireplace detail — Minneola, FL.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/kitchen-backsplash-black-tile.webp" alt="Matte black ceramic hexagon kitchen backsplash installation in Groveland, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/kitchen-backsplash-star-wars.webp" alt="Glossy glass mosaic kitchen backsplash installation in Clermont, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/kitchen-backsplash-stone-lock.webp" alt="Gray stone ledger kitchen backsplash installation in Winter Garden, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/kitchen-backsplash-stone-wedge.webp" alt="Multitone stone wedge kitchen backsplash installation in Minneola, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/kitchen-backsplash-tile.webp" alt="Classic white ceramic square tile kitchen backsplash installation in Orlando, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="images/gallery/patio-tile-black.webp" alt="Charcoal porcelain outdoor patio tile installation in Groveland, FL by Aesthetic Tile" loading="lazy">
+                            <div class="gallery-overlay"><span class="magnify-icon">+</span></div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="gallery-cta">
+                    <a class="cta-button" href="/contact">See something you love? Request a Quote</a>
                 </div>
             </div>
         </section>
@@ -502,6 +552,29 @@
             "https://www.instagram.com/aesthetictile/",
             "https://www.youtube.com/@AestheticTile"
         ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Aesthetic Tile Project Gallery: Central Florida Installations",
+        "description": "A showcase of completed tile installation projects, including kitchens, bathrooms, and flooring, by Aesthetic Tile in the Groveland, FL area.",
+        "url": "https://www.aesthetictile-florida.com/gallery",
+        "publisher": {
+            "@type": "LocalBusiness",
+            "name": "Aesthetic Tile",
+            "url": "https://www.aesthetictile-florida.com/",
+            "telephone": "+1-502-650-7014",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1195 Greenley Ave",
+                "addressLocality": "Groveland",
+                "addressRegion": "FL",
+                "postalCode": "34736",
+                "addressCountry": "US"
+            }
+        }
     }
     </script>
 </body>
