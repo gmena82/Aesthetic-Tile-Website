@@ -2545,6 +2545,28 @@ body.nav-open {
 .section.bath-process,
 .section.bath-testimonial { margin-top: 2rem; }
 
+main p + p,
+main p + ul,
+main p + ol,
+main ul + p,
+main ol + p,
+main ul + ul,
+main ol + ol,
+main ul + ol,
+main ol + ul {
+    margin-top: 1.75rem;
+}
+
+main ul,
+main ol {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+main li + li {
+    margin-top: 0.75rem;
+}
+
 .inline-cta { margin: 1rem 0; text-align: center; }
 
 .bath-waterproofing ul,
