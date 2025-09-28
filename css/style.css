@@ -2519,3 +2519,21 @@ body.nav-open {
     border-radius: 0.75rem;
     box-shadow: var(--shadow-lg);
 }
+
+/* Kitchen Backsplash page structure */
+.section.kb-materials,
+.section.kb-styles,
+.section.kb-process {
+    margin-top: 2rem;
+}
+
+.kb-styles ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.kb-testimonial blockquote {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-top: 1.25rem;
+}
