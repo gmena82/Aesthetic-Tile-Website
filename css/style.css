@@ -1398,6 +1398,36 @@ body.nav-open {
     margin: 2.5rem 0;
 }
 
+.blog-post-content .video-embed {
+    position: relative;
+    padding-top: 56.25%;
+    margin: 3rem 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: #000;
+}
+
+.blog-post-content .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.blog-cta {
+    margin: 3rem 0 0;
+    text-align: center;
+}
+
+.blog-cta p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
 .back-to-blog {
     text-align: center;
     margin-top: 3rem;
